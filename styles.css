@@ -18,14 +18,21 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
-    background-color: #111; /* Dark background */
     color: #fff; /* Light text */
     line-height: 1.6;
+    background-image: url('covers/sky.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire element */
+    background-position: center; /* Position the image in the center */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
 }
 
 /* Main content area */
 main {
     flex-grow: 1; /* Allow the main content to grow and take available space */
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: "Bebas Neue", serif;
 }
 
 /* Footer Styling */
@@ -105,104 +112,33 @@ nav {
     opacity: 0.7; /* Hover effect for social icons */
 }
 
-/* Section Styling */
-section {
-    padding: 100px 20px;
-    text-align: center;
-    border-bottom: 1px solid #333;
-}
-
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #f4c10f; /* Section title highlight */
-}
-
-section p {
-    font-size: 1.1rem;
-    color: #ccc;
-}
-
-/* Section Header */
-#music h2 {
-    font-size: 2rem;
-    color: #f4c10f;
-    margin-bottom: 20px;
-    text-align: center; /* Center-align the section title */
-}
-
-/* Release Container (Flexbox) */
-.release-container {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start; /* Align items to the top */
-    justify-content: center; /* Center the container content */
-    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
-}
-
 /* Cover Image Styling */
-.latest-cover {
+.cover-image {
     width: 500px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Release Details Styling */
-.release-details {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: left;
-    max-height: 500px; /* Match the max height of the image */
-    overflow-y: auto; /* Allow vertical scrolling for overflow text */
-    padding-right: 10px; /* Add padding to prevent text from touching the scrollbar */
-    scrollbar-width: thin; /* For modern browsers */
-    scrollbar-color: #f4c10f #111; /* Custom scrollbar colors */
-    width: 500px; /* Keep the same width as the cover image */
+/* Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 10px; /* Thin scrollbar */
+    height: 10px; /* Thin horizontal scrollbar */
+    color: #000;
 }
 
-/* Optional scrollbar styles for WebKit browsers */
-.release-details::-webkit-scrollbar {
-    width: 8px;
+::-webkit-scrollbar-thumb {
+    background-color: rgba(103, 103, 103, 0.8); /* Semi-transparent black thumb */
+    border-radius: 10px; /* Rounded corners */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Subtle border to add depth */
 }
 
-.release-details::-webkit-scrollbar-thumb {
-    background-color: #f4c10f;
-    border-radius: 4px;
+::-webkit-scrollbar-track {
+    background-color: #000; /* Black background for the track */
 }
 
-.release-details::-webkit-scrollbar-track {
-    background: #111;
+/* Smooth transition effect when the user scrolls */
+::-webkit-scrollbar-thumb:hover {
+    opacity: 0.7; /* Hover effect */
 }
 
-/* Release Details Title */
-.release-details h3 {
-    font-size: 1.8rem;
-    color: #fff;
-    margin: 0;
-}
-
-/* Tracklist Title */
-.release-details p {
-    font-size: 1.2rem;
-    color: #ddd;
-    margin: 0;
-}
-
-/* Tracklist Styling */
-.tracklist {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
-    font-size: 1rem;
-    color: #ccc;
-    text-align: left;
-}
-
-.tracklist li {
-    margin-bottom: 5px;
-}
 
 /* Responsive Design for Small Screens */
 @media (max-width: 1150px) {
@@ -265,5 +201,14 @@ section p {
     .social-icon {
         width: 40px; /* Reduce size of icons */
         height: auto; /* Maintain aspect ratio */
+    }
+
+    .cover-image {
+        width: 150px; /* The image will take up 100% of the available width */
+    }
+
+    main {
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }
