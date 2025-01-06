@@ -240,4 +240,14 @@ nav {
         margin-left: 50px;
         margin-right: 50px;
     }
+
+    .button-link {
+        display: inline-block; /* Makes the link behave like a button */
+        font-size: small; /* Large font size */
+        color: #000000; /* Text color */
+        background-color: #ffffff; /* Button background color */
+        padding: 5px 12px; /* Padding for button-like appearance */
+        text-decoration: none; /* Removes underline */
+        text-align: center; /* Centers text in the button */
+    }
 }
