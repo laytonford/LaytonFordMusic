@@ -214,6 +214,7 @@ nav {
         font-size: 1.7rem;
         margin-bottom: 20px; /* Space between nav and social media */
         margin-top: 70px;
+        padding-left: 20px;
     }
 
     .nav-menu li a {
@@ -249,5 +250,11 @@ nav {
         padding: 5px 12px; /* Padding for button-like appearance */
         text-decoration: none; /* Removes underline */
         text-align: center; /* Centers text in the button */
+    }
+
+    .button-link:hover {
+        border-color: #777; /* Change border color on hover */
+        cursor: pointer; /* Change cursor to pointer */
+        opacity: 0.8; /* Hover effect */
     }
 }
