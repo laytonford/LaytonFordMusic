@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    background-color: #111; /* Dark background */
+    color: #fff; /* Light text */
+    line-height: 1.6;
+}
+
+/* Main content area */
+main {
+    flex-grow: 1; /* Allow the main content to grow and take available space */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Header Styling */
+header {
+    height: 100px; /* Full-screen header */
+    background-color: #000; /* Dark background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    font-size: 1rem;
+    flex-grow: 1; /* Ensure it uses up the space on the left */
+    justify-content: flex-start;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.7rem;
+    font-family: 'Bebas Neue', serif;
+    transition: opacity 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    opacity: 0.7; /* Opacity shift on hover */
+}
+
+/* Logo Positioning */
+.center-logo {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the logo */
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Align social media icons to the right */
+}
+
+.social-icon {
+    width: 70px; /* Adjust size of social icons */
+    height: auto;
+    transition: opacity 0.3s;
+}
+
+.social-icon:hover {
+    opacity: 0.7; /* Hover effect for social icons */
+}
+
+/* Section Styling */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f4c10f; /* Section title highlight */
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* Section Header */
+#music h2 {
+    font-size: 2rem;
+    color: #f4c10f;
+    margin-bottom: 20px;
+    text-align: center; /* Center-align the section title */
+}
+
+/* Release Container (Flexbox) */
+.release-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: center; /* Center the container content */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+/* Cover Image Styling */
+.latest-cover {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Release Details Styling */
+.release-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    max-height: 500px; /* Match the max height of the image */
+    overflow-y: auto; /* Allow vertical scrolling for overflow text */
+    padding-right: 10px; /* Add padding to prevent text from touching the scrollbar */
+    scrollbar-width: thin; /* For modern browsers */
+    scrollbar-color: #f4c10f #111; /* Custom scrollbar colors */
+    width: 500px; /* Keep the same width as the cover image */
+}
+
+/* Optional scrollbar styles for WebKit browsers */
+.release-details::-webkit-scrollbar {
+    width: 8px;
+}
+
+.release-details::-webkit-scrollbar-thumb {
+    background-color: #f4c10f;
+    border-radius: 4px;
+}
+
+.release-details::-webkit-scrollbar-track {
+    background: #111;
+}
+
+/* Release Details Title */
+.release-details h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0;
+}
+
+/* Tracklist Title */
+.release-details p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin: 0;
+}
+
+/* Tracklist Styling */
+.tracklist {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    font-size: 1rem;
+    color: #ccc;
+    text-align: left;
+}
+
+.tracklist li {
+    margin-bottom: 5px;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 1150px) {
+    /* Adjust Header */
+    header {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center all child elements */
+        padding-left: 0; /* Remove padding */
+        width: 100%; /* Ensure the header spans the entire width */
+        position: relative; /* Keep the header relative for proper child positioning */
+        padding-top: 20px; /* Space from the top of the page */
+        padding-bottom: 160px;
+    }
+
+    /* Center Logo */
+    .center-logo {
+        width: 200px; /* Adjust size as needed */
+        height: auto;
+        margin-bottom: 20px; /* Add space below the logo */
+    }
+
+    /* Horizontal Navigation Menu under the Logo */
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row; /* Horizontal layout */
+        justify-content: center; /* Center the items horizontally */
+        align-items: center; /* Center menu items */
+        gap: 20px; /* Adjust gap between items */
+        font-size: 1.7rem;
+        margin-bottom: 20px; /* Space between nav and social media */
+        margin-top: 70px;
+    }
+
+    .nav-menu li a {
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Bebas Neue', serif;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-menu li a:hover {
+        opacity: 0.7; /* Opacity shift on hover */
+    }
+
+    /* Horizontal Social Media Icons Stack Underneath Nav */
+    .social-media {
+        display: flex;
+        flex-direction: row; /* Horizontal layout */
+        justify-content: center; /* Center icons */
+        align-items: center; /* Align icons to the center */
+        gap: 20px; /* Adjust gap between icons */
+        margin-top: 110px; /* Add spacing below the navigation menu */
+        width: 100%; /* Ensure it takes full width */
+        padding-left: 30px;
+    }
+
+    /* Smaller Icons */
+    .social-icon {
+        width: 40px; /* Reduce size of icons */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
