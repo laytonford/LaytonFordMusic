@@ -39,9 +39,12 @@ main {
 footer {
     background-color: #000;
     color: #fff;
-    text-align: left;
+    text-align: center;
     padding: 10px;
     width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    background:transparent;
 }
 
 /* Header Styling */
@@ -53,6 +56,7 @@ header {
     align-items: center;
     padding: 20px;
     position: relative;
+    background:transparent;
 }
 
 /* Navigation Menu */
@@ -66,7 +70,6 @@ nav {
     list-style: none;
     display: flex;
     gap: 40px;
-    font-size: 1rem;
     flex-grow: 1; /* Ensure it uses up the space on the left */
     justify-content: flex-start;
 }
@@ -85,7 +88,7 @@ nav {
 
 /* Logo Positioning */
 .center-logo {
-    width: 200px; /* Adjust size as needed */
+    width: 220px; /* Adjust size as needed */
     height: auto;
     position: absolute;
     top: 20px;
@@ -103,9 +106,10 @@ nav {
 }
 
 .social-icon {
-    width: 70px; /* Adjust size of social icons */
+    width: 40px; /* Adjust size of social icons */
     height: auto;
     transition: opacity 0.3s;
+    border-radius: 50px;
 }
 
 .social-icon:hover {
@@ -115,6 +119,45 @@ nav {
 /* Cover Image Styling */
 .cover-image {
     width: 500px;
+}
+
+#music h1 {
+    font-size: 50px;
+}
+
+#music h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+#music p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+#music h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative; /* Enable positioning for overlap */
+    top: -49px; /* Adjust upwards to overlap with text above */
+    text-align: right; /* Align text to the right */
+}
+
+/* Styling for the Button Links */
+.button-link {
+    display: inline-block; /* Makes the link behave like a button */
+    font-size: large; /* Large font size */
+    color: #000000; /* Text color */
+    background-color: #ffffff; /* Button background color */
+    padding: 8px 20px; /* Padding for button-like appearance */
+    text-decoration: none; /* Removes underline */
+    text-align: center; /* Centers text in the button */
+}
+
+/* Hover Effect */
+.button-link:hover {
+    border-color: #777; /* Change border color on hover */
+    cursor: pointer; /* Change cursor to pointer */
+    opacity: 0.8; /* Hover effect */
 }
 
 /* Webkit Browsers (Chrome, Safari, Edge) */
@@ -138,7 +181,6 @@ nav {
 ::-webkit-scrollbar-thumb:hover {
     opacity: 0.7; /* Hover effect */
 }
-
 
 /* Responsive Design for Small Screens */
 @media (max-width: 1150px) {
@@ -187,24 +229,11 @@ nav {
 
     /* Horizontal Social Media Icons Stack Underneath Nav */
     .social-media {
-        display: flex;
-        flex-direction: row; /* Horizontal layout */
-        justify-content: center; /* Center icons */
-        align-items: center; /* Align icons to the center */
-        gap: 20px; /* Adjust gap between icons */
-        margin-top: 110px; /* Add spacing below the navigation menu */
-        width: 100%; /* Ensure it takes full width */
-        padding-left: 30px;
-    }
-
-    /* Smaller Icons */
-    .social-icon {
-        width: 40px; /* Reduce size of icons */
-        height: auto; /* Maintain aspect ratio */
+        display: none; /* Make the social media icons disappear */
     }
 
     .cover-image {
-        width: 150px; /* The image will take up 100% of the available width */
+        width: 250px; /* The image will take up 100% of the available width */
     }
 
     main {
