@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
 .bebas-neue-regular {
     font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.major-mono-display-regular {
+    font-family: "Major Mono Display", serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -69,7 +76,7 @@ nav {
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 30px;
     flex-grow: 1; /* Ensure it uses up the space on the left */
     justify-content: flex-start;
 }
@@ -99,7 +106,7 @@ nav {
 /* Social Media Icons */
 .social-media {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     position: absolute;
     top: 20px;
     right: 20px; /* Align social media icons to the right */
@@ -121,7 +128,7 @@ nav {
     width: 500px;
 }
 
-#music h1 {
+h1 {
     font-size: 50px;
 }
 
@@ -140,6 +147,51 @@ nav {
     position: relative; /* Enable positioning for overlap */
     top: -49px; /* Adjust upwards to overlap with text above */
     text-align: right; /* Align text to the right */
+}
+
+#news {
+    text-align: center; /* Center-align the section */
+}
+
+#news-items {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between items */
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Limit the width */
+}
+
+.news-item {
+    flex: 1 1 calc(33.33% - 20px); /* Allow items to shrink and grow, and account for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.news-cover-image {
+    width: 100%; /* Make images fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.news-item h3 {
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: "Major Mono Display", serif;
+    font-weight: 400;
+}
+
+.news-item h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: 500;
+}
+
+.news-item p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
 }
 
 /* Styling for the Button Links */
@@ -256,5 +308,15 @@ nav {
         border-color: #777; /* Change border color on hover */
         cursor: pointer; /* Change cursor to pointer */
         opacity: 0.8; /* Hover effect */
+    }
+
+    .news-item {
+        flex: 1 1 calc(45% - 20px); /* Two per row for medium screens */
+    }
+}
+
+@media (max-width: 700px) {
+    .news-item {
+        flex: 1 1 100%; /* One per row for small screens */
     }
 }
