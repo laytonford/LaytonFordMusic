@@ -106,21 +106,30 @@ nav {
 /* Social Media Icons */
 .social-media {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     position: absolute;
     top: 20px;
     right: 20px; /* Align social media icons to the right */
 }
 
+/* Social Media Icon Positioning for Footer */
+.social-media-footer {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end; /* Align icons to the right */
+    padding: 10px 20px;
+    visibility: hidden; /* Initially hidden */
+}
+
 .social-icon {
-    width: 40px; /* Adjust size of social icons */
+    width: 40px; /* Adjust icon size */
     height: auto;
     transition: opacity 0.3s;
     border-radius: 50px;
 }
 
 .social-icon:hover {
-    opacity: 0.7; /* Hover effect for social icons */
+    opacity: 0.7; /* Hover effect */
 }
 
 /* Cover Image Styling */
@@ -194,6 +203,63 @@ h1 {
     font-size: 12px;
 }
 
+a.home-cover-link {
+    display: block; /* Center the link as a block element */
+    margin: 0 auto; /* Center the link horizontally */
+    max-width: 600px; /* Match the image's max width */
+    text-align: center; /* Ensure the image is centered inside */
+}
+
+.home-cover-image {
+    display: block; /* Ensure the image fills the link container */
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image inside the link */
+}
+
+#home h2 {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#home h4 {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#home p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+#home h4 {
+    font-family: "Bebas Neue", serif;
+    position: relative; /* Enable positioning for overlap */
+    text-align: center; /* Align text to the right */
+}
+
+.home-button-link {
+    display: block; /* Makes the link behave like a block element */
+    font-size: 25px; /* Large font size */
+    color: #ffffff; /* Text color (white) */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #ffffff; /* White border around the button */
+    padding: 10px 0; /* Vertical padding for button-like appearance */
+    text-decoration: none; /* Removes underline */
+    text-align: center; /* Centers text in the button */
+    width: 100%; /* Set the width to 100% of its parent container */
+    max-width: 600px; /* Ensures the button doesn't stretch beyond the image's width */
+    margin: 10px auto 0; /* Add a top margin for the gap and center the button */
+}
+
+.home-button-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    opacity: 0.8; /* Hover effect */
+}
+
 /* Styling for the Button Links */
 .button-link {
     display: inline-block; /* Makes the link behave like a button */
@@ -245,7 +311,7 @@ h1 {
         width: 100%; /* Ensure the header spans the entire width */
         position: relative; /* Keep the header relative for proper child positioning */
         padding-top: 20px; /* Space from the top of the page */
-        padding-bottom: 160px;
+        padding-bottom: 140px;
     }
 
     /* Center Logo */
@@ -264,7 +330,6 @@ h1 {
         align-items: center; /* Center menu items */
         gap: 20px; /* Adjust gap between items */
         font-size: 1.7rem;
-        margin-bottom: 20px; /* Space between nav and social media */
         margin-top: 70px;
         padding-left: 20px;
     }
@@ -280,7 +345,6 @@ h1 {
         opacity: 0.7; /* Opacity shift on hover */
     }
 
-    /* Horizontal Social Media Icons Stack Underneath Nav */
     .social-media {
         display: none; /* Make the social media icons disappear */
     }
@@ -312,6 +376,19 @@ h1 {
 
     .news-item {
         flex: 1 1 calc(45% - 20px); /* Two per row for medium screens */
+    }
+
+    .social-media-footer {
+        display: flex;
+        gap: 20px; /* Smaller gap */
+        justify-content: center; /* Center the icons */
+        align-items: center;
+        visibility: visible;
+    }
+
+    .social-icon {
+        width: 30px; /* Smaller icon size */
+        height: auto;
     }
 }
 
