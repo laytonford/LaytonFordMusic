@@ -451,18 +451,13 @@ a.home-cover-link {
         font-size: small;
         padding: 5px 12px;
     }
-}
 
-/* Reduce to 2 items per row on medium screens */
-@media (max-width: 900px) {
-    .merch-item {
-        flex: 1 1 calc(50% - 20px);
-    }
-}
-
-/* Reduce to 1 item per row on small screens */
-@media (max-width: 600px) {
     .merch-item {
         flex: 1 1 100%;
+    }
+
+    .merch-image {
+        width: 200px; /* Shrink the image to fit better on smaller screens */
+        height: 200px;
     }
 }
