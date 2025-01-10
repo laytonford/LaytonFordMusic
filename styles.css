@@ -456,6 +456,11 @@ a.home-cover-link {
         width: 30px;
         height: auto;
     }
+
+    #video h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 700px) {
