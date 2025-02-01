@@ -147,6 +147,10 @@ h1 {
     text-align: right;
 }
 
+#music h3 {
+    font-size: 35px;
+}
+
 #news {
     text-align: center;
 }
@@ -349,7 +353,6 @@ a.home-cover-link {
     border-radius: 12px; /* Keep the rounded corners */
     object-fit: cover; /* Make sure it covers the assigned space without distortion */
 }
-
 
 .merch-button-link {
     font-size: 20px;
